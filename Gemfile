@@ -7,6 +7,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
 gem 'middleman-gh-pages'
 
-#Favicons
-gem "middleman-favicon-maker", "~> 3.7"
 
