@@ -366,8 +366,6 @@
         <div class="row">
           <div class="col-lg-12">
             <form id="contactForm" action="https://getsimpleform.com/messages?form_api_token=cfa058e5a4ee754b7b341fc2165975f3" method="post">
-              <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-              <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
             <!-- <form id="contactForm" name="sentMessage" novalidate> -->
               <div class="row">
                 <div class="col-md-6">
@@ -393,7 +391,8 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-xl" type="submit">Send Message</button>
+                  <button id="sendMessageButton" class="btn btn-xl" type="submit">Envoyé <i class="fa fa-paper-plane"></i></button>
+
                 </div>
               </div>
             </form>

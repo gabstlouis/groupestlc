@@ -7,4 +7,3 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
 gem 'middleman-gh-pages'
 
-
