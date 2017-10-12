@@ -40,6 +40,21 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Javascript -->
+    <script src="javascripts/jqBootstrapValidation.js"></script>
+    <script src="javascripts/contact_me.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascripts/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="javascripts/agency.min.js"></script>
+
   </head>
 
   <body id="page-top">
@@ -473,78 +488,45 @@
                 </div>
               </div>
             </form> -->
-                        <form class="well form-horizontal" action="https://getsimpleform.com/messages?form_api_token=cfa058e5a4ee754b7b341fc2165975f3" method="post"  id="contact_form">
-                <fieldset>
-                    <!-- Form Name -->
-                    <!-- <legend>Contactez nous!</legend> -->
+            <form  id="contact_form" class="well form-horizontal" action="https://getsimpleform.com/messages?form_api_token=cfa058e5a4ee754b7b341fc2165975f3" method="post">
+                <!-- <fieldset> -->
+                  <div class="row">
+                    <div class="col-md-6">
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label black">Prénom</label>  
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input  name="prenom" placeholder="Prénom" class="form-control"  type="text">
-                            </div>
-                        </div>
+                      <div class="form-group">
+                        <input  name="prenom" placeholder="Nom complet" class="form-control"  type="text">
+                      </div>
+
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <input name="email" placeholder="Adresse courriel" class="form-control"  type="text">
+                      </div>
+
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <input name="phone" placeholder="(819)555-1212" class="form-control" type="text">
+                      </div>
                     </div>
 
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label black" >Nom</label> 
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="nom" placeholder="Nom" class="form-control"  type="text">
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                      <!-- Text area -->
+                      <div class="form-group">
+                        <textarea class="form-control" name="comment" placeholder="Description"></textarea>
+                      </div>
                     </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label black">Courriel</label>  
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="Adresse courriel" class="form-control"  type="text">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label black">Téléphone</label>  
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="(819)555-1212" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label black">Description</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment" placeholder="Description"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Réussi <i class="glyphicon glyphicon-thumbs-up"></i> Merci, nous vous contacterons dans les plus brefs délais.</div>
 
                     <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                            <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Envoyé <span class="glyphicon glyphicon-send"></span></button>
+                    <div class="form-group" style="width: 100%">
+                        <div class="clearfix"></div>
+                          <div class="col-lg-12 text-center">
+                            <!-- Success message -->
+                            <div class="alert alert-success" role="alert" id="success_message">Réussi <i class="fa fa-check"></i> Merci, nous vous contacterons dans les plus brefs délais.</div>
+                            <button id="sendMessageButton" class="btn btn-xl" type="submit">Envoyé <i class="fa fa-paper-plane"></i></button>
+                          </div>
                         </div>
                     </div>
-                </fieldset>
+                  </div>
+                <!-- </fieldset> -->
             </form>
           </div>
         </div>
@@ -758,21 +740,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascripts/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-    <!-- Contact form JavaScript -->
-    <script src="javascripts/jqBootstrapValidation.js"></script>
-    <script src="javascripts/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="javascripts/agency.min.js"></script>
-
         <!-- Footer -->
     <footer>
       <div class="container">
@@ -821,6 +788,7 @@
 
     <!-- Contact form JavaScript -->
     <script src="javascripts/jqBootstrapValidation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
     <script src="javascripts/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->

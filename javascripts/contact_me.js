@@ -75,6 +75,7 @@
 // });
 
  $(document).ready(function() {
+    $('#success_message').hide();
     $('#contact_form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
@@ -89,17 +90,7 @@
                         min: 2,
                     },
                         notEmpty: {
-                        message: 'Entrer votre prénom'
-                    }
-                }
-            },
-             nom: {
-                validators: {
-                     stringLength: {
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'Entrer votre nom de famille'
+                        message: 'Entrer votre nom complet'
                     }
                 }
             },
